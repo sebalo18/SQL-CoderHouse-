@@ -1,0 +1,165 @@
+-- ESe debe contar con el SCH 'cinemapp' creada. 
+USE cinemapp;
+-- Will Create the 'tipo_usuarios' table
+CREATE TABLE tipo_usuarios (
+id_tipo_usuario INT,
+tipo_usuario VARCHAR (25) NOT NULL,
+peliculas_permitidas INT NOT NULL,
+series_permitidas INT NOT NULL,
+costo FLOAT NOT NULL,
+PRIMARY KEY (id_tipo_usuario)
+);
+-- will create the 'usuarios' table
+CREATE TABLE usuarios(
+id_usuario INT,
+nombre_usuario VARCHAR (25) NOT NULL,
+nombre_identidad VARCHAR (50) NOT NULL,
+email VARCHAR (75) NOT NULL,
+edad INT NOT NULL,
+telefono INT,
+tipo_usuario INT NOT NULL,
+activo BOOLEAN NOT NULL,
+PRIMARY KEY (id_usuario),
+FOREIGN KEY (tipo_usuario) REFERENCES tipo_usuarios (id_tipo_usuario)
+);
+-- will create the 'actores' table
+CREATE TABLE actores (
+id_actor INT,
+nombre VARCHAR (25) NOT NULL,
+apellido VARCHAR (25),
+edad INT,
+nominaciones VARCHAR (50),
+obras VARCHAR (100) NOT NULL,
+nacionalidad VARCHAR (25),
+comentarios VARCHAR (250),
+PRIMARY KEY (id_actor) 
+);
+-- se creará la tabla 'directores'
+CREATE TABLE directores (
+id_director INT,
+nombre VARCHAR (50) NOT NULL,
+obras VARCHAR (100) NOT NULL,
+comentarios VARCHAR (250),
+PRIMARY KEY (id_director)
+);
+-- se creará la tabla 'genero_peliculas'
+CREATE TABLE generos_peliculas (
+id_genero_pelicula INT,
+nombre VARCHAR (50) NOT NULL,
+descripción VARCHAR (100) NOT NULL,
+peliculas_emblematicas VARCHAR (150),
+cantidad_de_peliculas INT,
+PRIMARY KEY (id_genero_pelicula)
+);
+-- se creara la table 'generos_series'
+CREATE TABLE generos_series (
+id_genero_serie INT,
+nombre VARCHAR (50) NOT NULL,
+descripción VARCHAR (100) NOT NULL,
+series_emblematicas VARCHAR (150),
+cantidad_de_series INT,
+PRIMARY KEY (id_genero_serie)
+);
+-- se creará la tabla 'productoras'
+CREATE TABLE productoras (
+id_productora INT,
+nombre_productora VARCHAR (75) NOT NULL,
+activo BOOLEAN NOT NULL,
+PRIMARY KEY (id_productora)
+);
+-- se creará la tabla 'peliculas'
+CREATE TABLE peliculas (
+id_pelicula INT,
+nombre VARCHAR (75) NOT NULL,
+descripcion VARCHAR (250) NOT NULL,
+genero INT NOT NULL,
+membresia_req INT NOT NULL,
+elenco_reconocido INT,
+direccion INT,
+duracion FLOAT NOT NULL,
+calificacion INT,
+reproducciones INT,
+clasificacion_edades VARCHAR (10),
+productora INT,
+PRIMARY KEY (id_pelicula),
+FOREIGN KEY (genero) REFERENCES generos_peliculas (id_genero_pelicula),
+FOREIGN KEY (membresia_req) REFERENCES tipo_usuarios (id_tipo_usuario),
+FOREIGN KEY (elenco_reconocido) REFERENCES actores (id_actor),
+FOREIGN KEY (direccion) REFERENCES directores (id_director),
+FOREIGN KEY (productora) REFERENCES productoras (id_productora)
+);
+-- se creará la tabla 'series'
+CREATE TABLE series (
+id_serie INT,
+nombre VARCHAR (75) NOT NULL,
+descripcion VARCHAR (250) NOT NULL,
+genero INT NOT NULL,
+membresia_req INT NOT NULL,
+elenco_reconocido INT,
+direccion INT,
+cantidad_temporadas INT NOT NULL,
+cantidad_capitulos INT NOT NULL,
+calificacion INT NULL,
+reproducciones FLOAT NOT NULL,
+clasificacion_edades VARCHAR (10) NOT NULL,
+productora INT,
+PRIMARY KEY (id_serie),
+FOREIGN KEY (genero) REFERENCES generos_series (id_genero_serie),
+FOREIGN KEY (membresia_req) REFERENCES tipo_usuarios (id_tipo_usuario),
+FOREIGN KEY (elenco_reconocido) REFERENCES actores (id_actor),
+FOREIGN KEY (direccion) REFERENCES directores (id_director),
+FOREIGN KEY (productora) REFERENCES productoras (id_productora)
+);
+-- se creará la tabla 'temporadas_series'
+CREATE TABLE temporadas_series (
+id_temporada INT,
+serie INT NOT NULL,
+nombre_temporada VARCHAR (50),
+numero_temporada INT NOT NULL,
+cantidad_capitulos INT NOT NULL,
+descripción_temporada VARCHAR (250),
+PRIMARY KEY (id_temporada),
+FOREIGN KEY (serie) REFERENCES series (id_serie)
+);
+-- se creará la tabla 'capitulos'
+CREATE TABLE capitulos (
+id_capitulo INT,
+nombre_capitulo VARCHAR (100) NOT NULL,
+serie INT NOT NULL,
+temporada INT NOT NULL,
+duración_capitulo DECIMAL,
+PRIMARY KEY (id_capitulo),
+FOREIGN KEY (serie) REFERENCES series (id_serie),
+FOREIGN KEY (temporada) REFERENCES temporadas_series (id_temporada)
+);
+-- se creará la tabla 'medios_de_pago'
+CREATE TABLE medios_de_pago (
+id_mediop INT,
+nombre_mediop VARCHAR(25) NOT NULL,
+descripcion_mediop VARCHAR (50),
+recargo BOOLEAN NOT NULL,
+cantidad_recargo DECIMAL,
+PRIMARY KEY (id_mediop)
+);
+-- se creará la tabla 'listas'
+CREATE TABLE listas (
+id_lista INT,
+nombre_lista VARCHAR (50) NOT NULL,
+id_usuario INT NOT NULL,
+serie_en_lista INT,
+pelicula_en_lista INT,
+descripcion_lista VARCHAR (150),
+PRIMARY KEY (id_lista),
+FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario),
+FOREIGN KEY (serie_en_lista) REFERENCES series (id_serie),
+FOREIGN KEY (pelicula_en_lista) REFERENCES peliculas (id_pelicula)
+);
+-- se creará la tabla 'votos_ranking'
+CREATE TABLE votos_ranking (
+calificacion FLOAT NOT NULL,
+tipo_calificacion VARCHAR (50) NOT NULL,
+usuario_votante INT NOT NULL,
+pelicula INT NOT NULL,
+FOREIGN KEY (usuario_votante) REFERENCES usuarios (id_usuario),
+FOREIGN KEY (pelicula) REFERENCES peliculas (id_pelicula)
+);
