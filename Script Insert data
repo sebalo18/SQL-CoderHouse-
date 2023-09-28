@@ -267,3 +267,35 @@ INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco
 VALUES (14, 'Big Little Lies', 'Mujeres enfrentan secretos oscuros en una comunidad aparentemente perfecta ', 4, 4, 2, null, 2, 7, 3333, '+15',1);
 INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
 VALUES (15, 'Home Comming', 'Julia Roberts interpreta a una trabajadora social en una instalación secreta del gobierno', 4, 5, 3, null, 2, 6, 1803, '+15',null);
+
+-- Se insertará data en la tabla 'temporadas_series'
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (1, 1, null, 1, 7, ' Introducción a Walter White y su entrada al mundo del narcotráfico');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (2, 1, 'Temporada II', 2, 13, '  Aumenta la tensión y los riesgos para Walter y Jesse');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (3, 1, 'Temporada III', 3, 13, ' La rivalidad con Gus Fring se intensifica');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (4, 1, 'Temporada IV', 4, 13, ' Confrontación final entre Walter y Gus');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (5, 1, 'Temporada V P.1', 5, 8, ' Walter expande su imperio y enfrenta consecuencias.');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (6, 1, 'Temporada V P.2', 6, 8, ' La conclusión épica de la historia de Walter');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (7, 11, 'Libro del Agua', 1, 20, ' Katara y Sokka descubren a Aang, el último Maestro del Aire');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (8, 11, 'Libro de la Tierra', 2,20 , ' El equipo se aventura por el reino tierra');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (9, 11, 'Libro del Fuego', 3, 21, ' La lucha contra la Nación del Fuego se intensifica');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (10, 11, 'Libro de la Tierra', 2,20 , ' El equipo se aventura por el reino tierra');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (11, 3, null, 1, 8, '  Desaparición de Will y aparición de Eleven en Hawkins');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (12, 3, null, 2, 9 , '  Continúa la amenaza del Otro Lado y nuevas criaturas.');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (13, 3, null, 3, 8 , '  Aventuras en el verano de 1985 y el crecimiento de los personajes.');
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (14, 2, ' Intrigas políticas y luchas por el Trono', 1, 10 , null);
+INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
+VALUES (15, 2, null, 2, 10 , null);
