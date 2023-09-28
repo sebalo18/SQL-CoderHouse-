@@ -1,0 +1,269 @@
+-- Insertará data en la tabla tipo_usuarios
+INSERT INTO tipo_usuarios (id_tipo_usuario, tipo_usuario, peliculas_permitidas, series_permitidas, costo)
+VALUES (1,'Gratuito', 1, 1, 0);
+INSERT INTO tipo_usuarios (id_tipo_usuario, tipo_usuario, peliculas_permitidas, series_permitidas, costo)
+VALUES (2,'Membresia Estandar', 2, 2, 500);
+INSERT INTO tipo_usuarios (id_tipo_usuario, tipo_usuario, peliculas_permitidas, series_permitidas, costo)
+VALUES (3, 'Membresia Premium', 3, 3, 1000);
+INSERT INTO tipo_usuarios (id_tipo_usuario, tipo_usuario, peliculas_permitidas, series_permitidas, costo)
+VALUES (4, 'Membresia VIP', 4, 4, 2000);
+INSERT INTO tipo_usuarios (id_tipo_usuario, tipo_usuario, peliculas_permitidas, series_permitidas, costo)
+VALUES (5, 'Series Premium', 4, 1, 750);
+INSERT INTO tipo_usuarios (id_tipo_usuario, tipo_usuario, peliculas_permitidas, series_permitidas, costo)
+VALUES (6, 'Peliculas Premium', 1, 4, 750);
+-- Insertará data en la tabla usuarios
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (1, 'sebalo18', 'Sebastian Lorenzo', 'sebalorenzo@mail.com', '25', '261234567', '4', true);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (2, 'Facuga09', 'Facundo Garrido', 'facundogarrido@mail.com', '32', '261234568', '1', true);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (3, 'snowball32', 'Pamela Castillo', 'pamecastillo@mail.com', '24', '261234568', '4', false);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (4, 'julip12', 'Julieta Pavon', 'julipavon@mail.com', '25', '261234569', '4', true);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (5, 'lucico_12', 'Lucia Cohan', 'lucicohan@mail.com', '25', '261234569', '4', false);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (6, 'gutierrezser', 'Sergio Gutierrez', 'gser@mail.com', '31', '261234571', '2', true);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (7, 'grlac', 'Graciela R. Lacoste', 'rlacoste@mail.com', '26', '261234577', '1', true);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (9, 'blackcat12', 'Rafael Gutierrez', 'rgutierrez@mail.com', '19', '261234167', '3', false);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (10, 'blackcat12', 'Rafael Gutierrez', 'rgutierrez@mail.com', '19', '261234167', '3', false);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (11, 'pmengo1', 'Pablo Mengolini', 'pablomengo@mail.com', '51', '261234567', '6', false);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (12, 'Paco_123', 'Paco Perez', 'paco1@mail.com', '44', '261334567', '2', true);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (13, 'milelop', 'Milena Lopez', 'milelop@mail.com', '13', '261234567', '2', true);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (14, 'fiiito', 'Rodolfo Gomez', 'fitog@mail.com', '37', '261234123', '3', false);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (15, 'pri_calvi', 'Priscila Calvi', 'pricalvi@mail.com', '26', '263224567', '6', false);
+INSERT INTO usuarios (id_usuario, nombre_usuario, nombre_identidad, email, edad, telefono, tipo_usuario, activo) 
+VALUES (16, 'jesuus', 'Jesus Martinez', 'jm123@mail.com', '47', '261232337', '5', true);
+-- Insertará data en la tabla 'Actores'
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (1, 'Meryl', 'Streep', 74, 'Oscar, Globo de Oro, Sindicato de actores, Emmy', 'El diablo viste a la moda, Mamma Mia, La Muerte le sienta bien', 'Estadounidense', 'Mary Louise Streep, ​ simplemente conocida como Meryl Streep, es una actriz y cantante estadounidense de teatro, cine y televisión, galardonada en tres ocasiones con el premio Óscar');
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (2, 'Nicole', 'Kidman', 56, 'Oscar, Sindicato de Actores, Globo de Oro', 'Los Otros, Big Little Lies, The Undoing', 'australiana', 'Nicole Mary Kidman es una actriz, productora y cantante australiana-estadounidense.​​ Ha recibido numerosos galardones, incluidos un Premio Óscar, un Premio BAFTA, un Premio del Sindicato de Actores, dos Premios Primetime Emmy y seis Globos de Oro');
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (3, 'Julia', 'Robberts', 55, 'Globo de Oro, Sindicato de actores', 'Mujer Bonita, Comer, Rezar, Amar', 'Estadounidense', 'Julia Fiona Roberts es una actriz de cine y televisión estadounidense, ganadora del premio Óscar a la mejor actriz, ​ así como de tres Globos de Oro en las categorías de mejor actriz en drama');
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (4, 'Madonna', null, 65, null, 'Evita, El cuerpo del Delito', 'Estadounidense', 'Si bien Madonna es altamente reconocida por su musica, también se ha destacado en su faceta de actriz');
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (5, 'Cameron', 'Diaz', 51, 'Premio Globo de Oro a Reparto', 'Shrek, Los Angeles de Charly', 'Estadounidense', null);
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (6, 'Cher', null, 77, 'Oscar a Mejor Actriz', 'Mamma Mia, Hechizo de Luna', 'Estadounidense', 'Cherilyn Sarkisian, ​ conocida como Cher, es una cantante, actriz, y celebridad de televisión estadounidense, comúnmente citada por los medios como la «Diosa del Pop');
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (7, 'Erica', 'Rivas', 48, null, 'Relatos Salvajes, Casados Con Hijos, La Bruja', 'argentina', null);
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (8, 'Norma', 'Aleandro', 87, 'Premio Cannes', 'La Historia Oficial', 'argentina', 'Norma Aleandro es una primera actriz, guionista y directora de teatro argentina. Es considerada una de las más célebres actrices argentinas, y un icono cultural');
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (9, 'Richard', 'Gere', 74, null, 'Mujer Bonita, Siempre a tu lado', 'Estadounidense', null);
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (10, 'Eddie', 'Murphie', 65, null, 'Shrek', 'Estadounidense', null);
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (11, 'Hugh', 'Jackman', 64, null, 'Los Miserables, Australia', 'australiana', 'Hugh Michael Jackman es un actor, cantante y productor de cine australiano, nacionalizado británico');
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (12, 'Anne', 'Hathaway', 40, 'Oscar, Globo de Oro, BAFTA', 'Los Miserables, El Diablo Viste a la moda', 'estadounidense', null);
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (13, 'Jennifer', 'Anniston', 52, null, 'Friends, The Morning Show', 'Estadounidense', null);
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (14, 'Emilia', 'Clarke', 36, 'Emmy Actriz de Reparto', 'Game of Thrones, Yo Antes de Ti', 'britanica', null);
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (15, 'Guillermo', 'Francella', 52, null, 'Casados Con Hijos, El secreto de sus Ojos', 'argentina', null);
+INSERT INTO actores (id_actor, nombre, apellido, edad, nominaciones, obras, nacionalidad, comentarios)
+VALUES (16, 'Maggie', 'Smith', 88, 'Oscar', 'Downtown Abbey, Harry Potter', 'britanica', 'Dame Margaret Natalie Smith, ​ conocida artísticamente como Maggie Smith, es una consagrada actriz británica de teatro, cine y televisión.');
+-- Insertará data en la tabla 'Directores'
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (1, 'Mike Mitchell', 'Shrek', null);
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (2, 'Damian Szifron', 'Relatos Salvajes, Misantropo', 'Damián David Szifron es un director y guionista argentino de cine y televisión, creador de la serie Los simuladores');
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (3, 'J.Jose Campanella', 'Metegol, El secreto de sus ojos', null);
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (4, 'Mimi Leder', 'The Morning Show', null);
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (5, 'Steven Soderbergh', 'Traffic, Erin Brocovich', 'Fue galodornado por su dirección en Traffic');
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (6, 'Phyllida Lloyd', 'La Dama de Hierro, Mamma Mia', null);
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (7, 'Chris Columbus', 'Harry Potter (I) y (II), Mi Pobre angelito', 'Christopher Joseph Columbus, ​ conocido como Chris Columbus, es un director de cine estadounidense. Se inició en el cine como guionista de la película Gremlins, de la productora de Steven Spielberg');
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (8, 'Tom Hooper', 'Cats, Los Miserables', null);
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (9, 'Steven Spielberg', 'Tiburon, E.T', null);
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (10, 'Alejandro Amenábar', 'Los Otros', 'Alejandro Fernando Amenábar Cantos es un director de cine, guionista y compositor hispano-chileno.​ Ganador de nueve Premios Goya y un Óscar, ha escrito los guiones de sus siete películas y ha compuesto casi todas las bandas sonoras de dichos filmes');
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (11, 'Tim Burton', 'Batman, El cadaver de la novia', null);
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (12, 'Alan Parker', 'Evita, Corazon Satanico', null);
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (13, 'Luis Puenzo', 'La Historia oficial', 'Luis Puenzo es un director y guionista de cine argentino. Obtuvo el Óscar a la mejor película extranjera en 1986 con su primer largometraje, La historia oficial, una historia acerca de los desaparecidos por la dictadura argentina.');
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (14, 'Quentin Tarantino', 'Tiempos Violentos, Kill Bill', null);
+INSERT INTO directores (id_director, nombre, obras, comentarios)
+VALUES (15, 'Baz Luhrmann', 'Australia', null);
+-- Se insertará data en la tabla 'generos_peliculas
+INSERT INTO generos_peliculas (id_genero_pelicula, nombre, descripción, peliculas_emblematicas, cantidad_de_peliculas)
+VALUES (1, 'Acción', 'Películas llenas de emoción, peleas y persecuciones','Nikita, Rambo', 145);
+INSERT INTO generos_peliculas (id_genero_pelicula, nombre, descripción, peliculas_emblematicas, cantidad_de_peliculas)
+VALUES (2, 'Comedia', 'Películas destinadas a hacerte reír.','La muerte les sienta bien', 150);
+INSERT INTO generos_peliculas (id_genero_pelicula, nombre, descripción, peliculas_emblematicas, cantidad_de_peliculas)
+VALUES (3, 'Ciencia Ficción', 'Explora mundos futuristas y conceptos científicos','Matrix, Intersetellar', 205);
+INSERT INTO generos_peliculas (id_genero_pelicula, nombre, descripción, peliculas_emblematicas, cantidad_de_peliculas)
+VALUES (4, 'Suspenso', 'Mantienen a la audiencia en vilo','Los Otros, El silencio de los inocentes', null);
+INSERT INTO generos_peliculas (id_genero_pelicula, nombre, descripción, peliculas_emblematicas, cantidad_de_peliculas)
+VALUES (5, 'Romance', 'Historias de amor y relaciones','Yo Antes de Ti, The Notebook', 1045);
+INSERT INTO generos_peliculas (id_genero_pelicula, nombre, descripción, peliculas_emblematicas, cantidad_de_peliculas)
+VALUES (6, 'Drama', 'Historias emotivas centradas en personajes','Erin Brokcovich', 14115);
+INSERT INTO generos_peliculas (id_genero_pelicula, nombre, descripción, peliculas_emblematicas, cantidad_de_peliculas)
+VALUES (7, 'Animación', 'Películas animadas para todas las edades' ,'Shrek, Frozen', 315);
+INSERT INTO generos_peliculas (id_genero_pelicula, nombre, descripción, peliculas_emblematicas, cantidad_de_peliculas)
+VALUES (8, 'Musical', 'Combina música y baile en la narrativa','Evita, Los Miserables', 35);
+INSERT INTO generos_peliculas (id_genero_pelicula, nombre, descripción, peliculas_emblematicas, cantidad_de_peliculas)
+VALUES (9, 'Aventura', 'Viajes emocionantes y descubrimientos','Jurasic Park', null);
+INSERT INTO generos_peliculas (id_genero_pelicula, nombre, descripción, peliculas_emblematicas, cantidad_de_peliculas)
+VALUES (10, 'Crimen', 'Historias de detectives y crímenes', null, null);
+-- Insertará data en la tabla 'generos_series'
+INSERT INTO generos_series (id_genero_serie, nombre, descripción, series_emblematicas, cantidad_de_series)
+VALUES (1, 'Historica', 'Situadas en épocas pasadas', 'Dowtnow Abbey, The Crown', 14);
+INSERT INTO generos_series (id_genero_serie, nombre, descripción, series_emblematicas, cantidad_de_series)
+VALUES (2, 'Comedia', 'Series diseñadas para hacer reír al público', 'Friends, The big bang theory', 34);
+INSERT INTO generos_series (id_genero_serie, nombre, descripción, series_emblematicas, cantidad_de_series)
+VALUES (3, 'Fantasia', 'Ambientadas en mundos mágicos y elementos sobrenaturales', 'Game of Thrones, The Witcher', 24);
+INSERT INTO generos_series (id_genero_serie, nombre, descripción, series_emblematicas, cantidad_de_series)
+VALUES (4, 'Drama', 'Historias emotivas centradas en personajes y relaciones', 'The Sopranos', 14);
+INSERT INTO generos_series (id_genero_serie, nombre, descripción, series_emblematicas, cantidad_de_series)
+VALUES (5, 'Terror', 'Crean miedo y suspenso en la audiencia', null, 11);
+INSERT INTO generos_series (id_genero_serie, nombre, descripción, series_emblematicas, cantidad_de_series)
+VALUES (6, 'Animacion', 'Series animadas para todas las edades', 'Los Simpson, Rick y Morty', 34);
+INSERT INTO generos_series (id_genero_serie, nombre, descripción, series_emblematicas, cantidad_de_series)
+VALUES (7, 'Politica', 'Abordan temas políticos y de gobierno', 'House of Cards', null);
+INSERT INTO generos_series (id_genero_serie, nombre, descripción, series_emblematicas, cantidad_de_series)
+VALUES (8, 'Documental', 'Exploran hechos y eventos reales', null, 7);
+INSERT INTO generos_series (id_genero_serie, nombre, descripción, series_emblematicas, cantidad_de_series)
+VALUES (9, 'Crimen', 'Tratan sobre detectives y crímenes', 'Sherlock', null);
+INSERT INTO generos_series (id_genero_serie, nombre, descripción, series_emblematicas, cantidad_de_series)
+VALUES (10, 'SuperHeroes', 'Se centran en personajes con habilidades sobrenaturales', 'Flash', null);
+-- Se insertará data en la tabla 'productoras'
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (1, 'HBO (Home Box Office', true);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (2, 'Netflix', true);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (3, 'Amazon Studios', true);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (4, 'Universal TV', true);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (5, 'Hulu', false);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (6, 'Apple TV+', true);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (7, 'Universal Studios', true);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (8, 'Warner Bros Pictures', true);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (9, 'Walt Disney Pictures', true);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (10, 'Columbia Pictures', true);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (11, 'Paramount Pictures', true);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (12, '20th Century Studios', true);
+INSERT INTO productoras (id_productora, nombre_productora, activo)
+VALUES (13, 'Generyc Studio', false);
+-- Insertará data en la tabla 'peliculas'
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'La Muerte le Sienta bien', 'Helen y Madeline, enemigas acérrimas, depositan su confianza en su cirujano plástico que les ofrece el secreto de la vida eterna. Cuando ambas se vuelven inmortales, nada volverá a ser lo mismo', 2,2,1, null, 1.41, 7, 1453, '+13', 8); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (2, 'Los Otros', 'La II Guerra Mundial ha terminado, pero el marido de Grace no vuelve. Sola en un aislado caserón victoriano, educa a sus hijos dentro de rígidas normas religiosas e impone una regla de oro: mantener la casa en penumbra por sus hijos', 4,2,2, 10, 1.41, 8, 2720, '+15', 8); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (3, 'Comer, Rezar, Amar', 'Liz Gilbert pensó que tenía todo lo que ella quería en la vida: una casa, un marido y una carrera exitosa. Pero un día descubre que ya no quiere más esa vida, por lo que decide poner fin a su matrimonio y emprender un viaje de autodescubrimiento', 6,3,3, null, 2.31, 7, 1823, 'ATP', null); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (4, 'Los Angeles de Charly', 'Una agencia de detectives dirigida por el multimillonario Charlie tiene en sus filas a tres expertas en artes marciales, en disfraces y en tecnología. Juntas tendrán que ocuparse de un caso muy importante.', 9,1,5, null, 1.36, 8, 3009, 'ATP', 11); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (5, 'Evita', 'La versión en filme del musical de Andrew Lloyd Webber y Tim Rice que relata la vida y muerte de Eva Perón de Argentina.', 8,3,4, 12, 2.16, 5, 973, 'ATP', 9); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (6, 'Mi Pobre Angelito', 'Un niño de Nueva York deberá defender su hogar de unos despiadados maleantes', 2,1,null, 7, 1.54, 8, 1954, 'ATP', 8); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (7, 'Invasion', 'Carol, una psiquiatra de Washington, descubre una epidemia extraterrestre que ataca a los seres humanos mientras duermen. A partir de ese momento, la doctora luchará para proteger a su hijo mientras trata de mantenerse despierta.', 4,4,2, null, 1.34, 6, 103, '+13', null); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (8, 'El Tutor', 'Sigue a un tutor que, después de que se le asignó una tarea inesperada en una mansión, se encuentra luchando con las obsesiones de su estudiante', 4,6 ,null, null, 1.32, 6, 103, '+13', null); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (9, 'El Secreto de Sus Ojos', 'Un thriller argentino de suspense y misterio', 4,3,15, 3, 2.01, 7, 1397, '+15', null); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (10, 'Yo antes de ti', 'Una emotiva historia de amor y superación', 5,4,14, null, 1.55, 6, 971, 'ATP', 8); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (11, 'Forest Gump', 'Hombre con discapacidad intelectual vive una vida extraordinaria', 4,1,null, null, 2.16, 8, 1973, 'ATP', 10); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (12, 'Los Miserables', 'Épica historia de redención y lucha en la Revolución Francesa', 8,4,11, 8, 2.36, 8, 1073, '+13', 11); 
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (13, 'El silencio de las comadrejas', 'Una comedia argentina sobre el pasado y la fama en el cine.', 2,6,8, null, 1.58, 7, 461, '+13', null);
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (14, 'Shrek', 'Un ogro embarca en una aventura para rescatar a una princesa', 7,2,5, null, 1.32, 10, 9999999, 'ATP', 7);
+INSERT INTO peliculas(id_pelicula, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, duracion, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (15, 'Guerra de Novias', 'Dos amigas compiten por la boda de sus sueños.', 2,1,12, null, 1.50, 7, 933, '+13', 9);
+-- Insertará data en la tabla 'Series' 
+-- tengo que borrar las columnas direccion y cantidad capitulos
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, 5, 9, 1203, '+15',null);
+-- Se añadira data a la tabla ´series'
+-- PRIMERO DEBERÁ EJECUTARSE EL ALTER TABLE PARA ELIMINAR UNA COLUMNA QUE SE DECIDIÓ ELIMINAR
+ALTER TABLE series DROP COLUMN cantidad_capitulos;
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (1, 'Breaking Bad', 'Profesor se convierte en narcotraficante', 4, 2, null, null, 5, 9, 1203, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (2, 'Game of Thrones', 'Luchas de poder en un mundo ficticio', 1, 3, 14, null, 8, 9, 2013, '+15',1);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (3, 'Stranger Things', 'Misterio y criaturas sobrenaturales', 3, 3, null, null, 4, 8, 2219, '+13',2);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (4, 'Friends', ' Amigos en Nueva York', 2, 3, 13, null, 10 ,8, 3403, 'ATP',8);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (5, 'The Crown', 'La vida de la Reina Isabel II', 1, 2, null, 3, 5, 7, 2003, '+15',2);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (6, 'Casados Con Hijos', 'Comedia sobre una tipica familia argentina', 2, 1, 7,null, 2, 9, 3393, '+13',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (7, 'The morning Show', 'Narra la historia de un importante noticiero', 4, 5, 13, 7, 4, 6, 973, '+15',6);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (8, 'The Office', ' Rutina cómica en la oficina', 2, 4, null, null, 9, 8, 2753, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (9, 'Black Mirror', 'Historias de ciencia ficción perturbadora', 9, 4, null, 8, 5, 8, 1823, '+15',2);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (10, 'Narcos', 'Historia del narcotráfico en Colombia', 9, 3, null, null,3, 7, 938, '+13',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion,cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (11, 'Avatar: the last airbender', 'Aang, el último Maestro del Aire, busca equilibrio en un mundo en guerra', 6, 2, null, null, 3, 9, 9203, 'ATP',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (12, 'The Witcher', 'Aventuras del cazador de monstruos ', 4, 2, null, null, 5, 9, 1333, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (13, 'House of Cards', 'Intrigas políticas y ambiciones en Washington D.C.', 7, 5, null, 8, 6, 6, 803, '+15',null);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (14, 'Big Little Lies', 'Mujeres enfrentan secretos oscuros en una comunidad aparentemente perfecta ', 4, 4, 2, null, 2, 7, 3333, '+15',1);
+INSERT INTO series (id_serie, nombre, descripcion, genero, membresia_req, elenco_reconocido, direccion, cantidad_temporadas, calificacion, reproducciones, clasificacion_edades, productora)
+VALUES (15, 'Home Comming', 'Julia Roberts interpreta a una trabajadora social en una instalación secreta del gobierno', 4, 5, 3, null, 2, 6, 1803, '+15',null);
