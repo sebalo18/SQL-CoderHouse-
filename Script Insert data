@@ -288,7 +288,7 @@ VALUES (8, 11, 'Libro de la Tierra', 2,20 , ' El equipo se aventura por el reino
 INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
 VALUES (9, 11, 'Libro del Fuego', 3, 21, ' La lucha contra la Nación del Fuego se intensifica');
 INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
-VALUES (10, 11, 'Libro de la Tierra', 2,20 , ' El equipo se aventura por el reino tierra');
+VALUES (10, 2, null, 3,10 , null);
 INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
 VALUES (11, 3, null, 1, 8, '  Desaparición de Will y aparición de Eleven en Hawkins');
 INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
@@ -299,3 +299,113 @@ INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_tem
 VALUES (14, 2, ' Intrigas políticas y luchas por el Trono', 1, 10 , null);
 INSERT INTO temporadas_series (id_temporada, serie, nombre_temporada, numero_temporada, cantidad_capitulos, descripción_temporada)
 VALUES (15, 2, null, 2, 10 , null);
+
+-- Se importará data a la tabla 'capitulos'
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (1, 'El Estado Avatar', 11, 2, 25);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (2, 'La Cueva de los amantes', 11, 2, 25);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (3, 'Regreso a Omashu', 11, 2, 23);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (4, 'El Pantano', 11, 2, 26);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (5, 'La bandida ciega', 11, 2, 25);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (6, 'Zuko en Soledad', 11, 2, 26);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (7, 'La Persecución', 11, 2, 25);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (8, 'Trabajo Amargo', 11, 2, 25);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (9, 'La biblioteca', 11, 2, 25);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (10, 'El invierno se acerca', 2, 1, 61);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (11, 'El camino Real', 2, 1, 63);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (12, 'Señor de la Nieve', 2, 1, 58);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (13, 'Lisiados, Bastardos y Cosas rotas', 2, 1, 64);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (14, 'El lobo y el León', 2, 1, 53);
+INSERT INTO capitulos (id_capitulo, nombre_capitulo, serie, temporada, duración_capitulo)
+VALUES (15, 'Una Corona Dorada', 2, 1, 65);
+
+--
+
+-- Se insertará data en la tabla 'listas'
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (1, 'Lista I', 3, 6, 5, null);
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (2, 'Lista II', 3, 12, 7, null);
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (3, 'Animacion', 5, 14, 11, 'Pelis de animacion');
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (4, 'Nicoleta', 2, 14, 5, 'Actuaciones de Nicole Kidman');
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (5, 'Lista III', 3, 8, 15, null);
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (6, 'Lista IV', 3, 12, 2, null);
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (7, 'emilia :3', 6, null, 10, 'pelis de emilia clarke');
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (8, 'Peliculas independientes', 15, null, null, null);
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (9, 'Lista V', 3, 2, 2, null);
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (10, 'Romanticas', 12, 10, null, null);
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (11, 'Lista X', 3, 1, 13, NULL);
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (12, 'Politicas', 9, null, 13, 'series de politicas');
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (13, 'peliculas rusas', 1, null, null, 'peliculas para ver en ruso');
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (14, 'Lista XI', 3, 3, 3, null);
+INSERT INTO listas (id_lista, nombre_lista, id_usuario, serie_en_lista, pelicula_en_lista, descripcion_lista)
+VALUES (15, 'Series q me gustan', 11, null, 8, null);
+
+-- Se insertará data a la tabla 'medios_de_pago'
+-- Antes se deberá ejecutar el 'Alter Table' para modificar una columna que creemos será optimo luego de la modificación.
+ALTER TABLE medios_de_pago MODIFY cantidad_recargo DECIMAL (5,2);
+INSERT INTO medios_de_pago (id_mediop, nombre_mediop, descripcion_mediop, recargo, cantidad_recargo)
+VALUES (1, 'Debito', 'Uso de Tarjetas de Debito', false, null);
+INSERT INTO medios_de_pago (id_mediop, nombre_mediop, descripcion_mediop, recargo, cantidad_recargo)
+VALUES (2, 'Tarjeta de Credito', 'Uso de Tarjetas de Credito', false, null);
+INSERT INTO medios_de_pago (id_mediop, nombre_mediop, descripcion_mediop, recargo, cantidad_recargo)
+VALUES (3, 'Paypal', 'Pagar a través de Paypal', true, 6.5);
+INSERT INTO medios_de_pago (id_mediop, nombre_mediop, descripcion_mediop, recargo, cantidad_recargo)
+VALUES (4, 'Billeteras Virtuales', 'Pago a través de diversas billeteras virtuales', false, null);
+INSERT INTO medios_de_pago (id_mediop, nombre_mediop, descripcion_mediop, recargo, cantidad_recargo)
+VALUES (5, 'Criptomonedas', 'Pago a través de criptomonedas', true, 9.5);
+
+--
+
+-- Insertará data en la tabla 'votos_ranking'
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (2.5, 'mala', 1, 2);
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (7, 'Buena', 2, 5);
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (8.5, 'Muy Buena', 3, 2);
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (6.6, 'Buena', 6, 6);
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (9, 'Excelente', 9, 12);
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (0.5, 'Muy mala', 13, 13);
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (8.75, 'Muy Buena', 1, 12);
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (8, 'Buena', 14, 8);
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (7.5, 'Buena', 9, 12);
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (1, 'Muy mala', 15, 15);
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (3, 'mala', 7, 12);
+INSERT INTO votos_ranking (calificacion, tipo_calificacion, usuario_votante, pelicula)
+VALUES (8.25, 'Buena', 3, 1);
+
+
