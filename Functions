@@ -1,0 +1,49 @@
+-- Nuestra primer función tiene como objetivo informarle al usuario que nivel o tipo de usuario es. Para esto sse trabaja con el 
+--nombre de usuario (que se ingresa como parametro) y a través de una busqueda en las distintas tablas poder llegar a saber el nombre del tipo de usuario. 
+--El resultado final será un mensaje en donde se concatena un mensaje personalizado, el nombre de usuario y el tipo de usuario.
+--NOTA: En un primer momento pensé en usar el id del usuario en lugar del nombre pero decidí que para los usuarios finales es más sencillo trabajar con el nombre.
+DELIMITER $$
+CREATE FUNCTION `tipo_de_usuario`(usuario VARCHAR (25)) RETURNS VARCHAR(150)
+READS SQL DATA
+BEGIN
+DECLARE var_tipo_usuario VARCHAR (25);
+
+SET var_tipo_usuario = 	(SELECT tipo_usuario FROM usuarios
+						WHERE nombre_usuario = usuario);
+				
+RETURN CONCAT('Hola ', usuario , ' tu tipo de usuario es: ', '"', var_tipo_usuario, '"');
+END
+
+$$
+
+--Nuestra segunda función busca calcular el precio final de las distintas membresias considerando los aumentos que perciben según el medio de pago.
+--El modo de operar es en primer lugar colocar como parametro el ID de los medios de pago y de los tipos de usuario.
+--Luego a partir de algunas variables obtener el precio de cada uno y mediante una simple cuenta matematica obtener el resultado final.
+
+
+--Primero se tiene que hacer un update de algunos valores de la tabla medios_de_pago para que la función se ejecute correctamente.
+-- SE TIENE QUE DESACTIVAR EL MODO 'EDIT SAFE' PARA PODER EDITAR UPDATEAR LA DATA
+UPDATE medios_de_pago 
+SET cantidad_recargo = 0
+WHERE cantidad_recargo IS NULL
+
+DELIMITER $$
+CREATE FUNCTION `monto_recargo`(p_costo INT, recargo INT) RETURNS decimal(35,2)
+READS SQL DATA
+BEGIN
+DECLARE costo_membresia INT;
+DECLARE var_cantidad_recargo DECIMAL (20,2);
+DECLARE costo_final DECIMAL (15,2);
+SET costo_membresia = (SELECT costo FROM tipo_usuarios
+					  WHERE id_tipo_usuario = p_costo);
+SET var_cantidad_recargo = 	(SELECT cantidad_recargo FROM medios_de_pago
+							WHERE id_mediop = recargo);
+SET costo_final = (costo_membresia * var_cantidad_recargo);                        
+
+IF var_cantidad_recargo = 0.00
+THEN RETURN costo_membresia;
+ELSE RETURN costo_final;
+END IF;
+END
+$$
+$$
