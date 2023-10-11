@@ -1,0 +1,101 @@
+
+--El primer SP es para poder crear un registro en la tabla 'listas' incluyendo el nombre de la misma asì como la descripcion y el usuario creante.
+-- Para que el procedimiento funcione correctamente primero se debera actualizar la tabla con la sentencia:
+ALTER TABLE listas
+MODIFY id_lista INT AUTO_INCREMENT;
+DELIMITER $$
+CREATE PROCEDURE crear_listas (par_usuario VARCHAR (50), par_lista VARCHAR(50), par_descripcion (150))
+BEGIN
+DECLARE usuario_creador INT; 
+
+SET usuario_creador	=	(SELECT id_usuario FROM usuarios
+						 WHERE nombre_usuario = par_usuario);
+                         
+INSERT INTO listas (nombre_lista, id_usuario, descripcion_lista) VALUES 
+(par_lista, usuario_creador, par_descripcion);
+END
+DELIMITER $$
+
+
+-- Stored Procedure para agregar pelis/series a la lista
+DELIMITER $$
+CREATE PROCEDURE agregar_lista (par_usuario INT, par_lista INT, par_pelicula INT, par_serie INT)
+BEGIN
+DECLARE var_usuario INT;
+DECLARE var_lista INT;
+DECLARE var_pelicula INT;
+DECLARE var_serie INT;
+
+SET var_usuario =	(SELECT id_usuario FROM usuarios
+					WHERE par_usuario = id_usuario);
+SET var_lista =		(SELECT id_lista FROM listas
+					WHERE par_lista = id_lista);
+SET var_pelicula = (SELECT id_pelicula FROM peliculas
+					WHERE par_pelicula = id_pelicula);
+SET var_serie =		(SELECT id_serie FROM series
+					WHERE par_serie = id_serie);
+
+IF var_lista IS NOT NULL                     
+THEN UPDATE listas
+SET pelicula_en_lista = par_pelicula, serie_en_lista = par_serie
+WHERE id_lista = var_lista; 
+ELSE
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ERROR: no se encontró la lista';
+    END IF;
+END
+$$
+
+
+-- Stored Procedure para agregar votos al Ranking
+DELIMITER $$
+CREATE PROCEDURE votar_pelicula (par_votante INT, par_pelicula INT, par_voto FLOAT (5,2))
+BEGIN
+DECLARE var_usuario INT;
+DECLARE var_pelicula INT;
+DECLARE var_tipo_calificacion VARCHAR (50);
+
+SET var_usuario =	(SELECT id_usuario FROM usuarios
+					WHERE par_votante = id_usuario);
+
+SET var_pelicula = (SELECT id_pelicula FROM peliculas
+					WHERE par_pelicula = id_pelicula);
+IF par_voto > 7
+THEN SET var_tipo_calificacion = 'Muy Buena';
+ELSEIF par_voto > 3  AND par_voto < 7  THEN  SET var_tipo_calificacion = 'Buena';
+ELSEIF par_voto < 3 THEN SET var_tipo_calificacion = 'Mala';
+END IF;
+
+INSERT INTO votos_ranking (calificacion, pelicula, tipo_calificacion, usuario_votante) VALUES
+(par_voto, var_pelicula, var_tipo_calificacion, var_usuario);
+
+END
+$$
+
+
+-- Sirve para buscar peliculas que protagonice el actor/actriz
+DELIMITER $$
+CREATE PROCEDURE buscar_actor (par_actor INT)
+BEGIN
+DECLARE var_actor INT;
+
+SET var_actor =		(SELECT id_actor FROM actores
+					WHERE par_actor = id_actor);
+
+SELECT nombre FROM peliculas 
+WHERE elenco_reconocido = var_actor;
+END
+$$
+
+
+-- Sirve para buscar series que protagonice el actor/actriz
+DELIMITER $$
+CREATE PROCEDURE buscar_actor (par_actor INT)
+BEGIN
+DECLARE var_actor INT;
+
+SET var_actor =		(SELECT id_actor FROM actores
+					WHERE par_actor = id_actor);
+
+SELECT nombre FROM series 
+WHERE elenco_reconocido = var_actor;
+END
