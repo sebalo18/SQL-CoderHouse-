@@ -1,0 +1,41 @@
+-- Nuestra primera vista nos permite visualizar aquellos usuarios que se encuentren actualmente activos en la app. Seleccionando solo los datos que consideramos más importantes (id, nombre, mail y el tipo de usuario) 
+-- y ordenandolos de manera alfabetica (para que sea más fácil buscar) según el nombre de usuario
+
+CREATE VIEW usuarios_activos AS
+	(SELECT id_usuario, nombre_usuario, email, tipo_usuario
+    FROM usuarios
+    WHERE activo = 1
+    ORDER BY nombre_usuario ASC);
+    
+-- Esta vista nos permite ver las peliculas que son producidas por una empresa que se encuentra dentro de nuestro catalogo.
+CREATE VIEW peliculas_con_productora AS
+(SELECT id_pelicula, nombre, nombre_productora FROM peliculas p1 
+INNER JOIN productoras p2 ON p1.productora  = p2.id_productora 
+WHERE productora IS NOT NULL 
+ORDER BY id_pelicula ASC);
+
+-- La siguiente vista presenta aquellos usuarios, que se encuentran activos y registrados pero tienen una membresía gratuita.
+CREATE VIEW usuarios_gratuitos AS
+(SELECT nombre_usuario, nombre_identidad, email FROM usuarios
+WHERE tipo_usuario = 1
+AND activo = 1);
+-- La siguiente vista nos permite ver el tipo de membresia requerido para cada pelicula.
+CREATE VIEW peliculas_membresias AS
+(SELECT id_pelicula, nombre, tipo_usuario FROM peliculas p
+INNER JOIN tipo_usuarios t 
+ON p.membresia_req = t.peliculas_permitidas 
+ORDER BY tipo_usuario);
+-- La siguiente vista nos permite ver el tipo de membresia requerido para cada serie.
+CREATE VIEW series_membresia AS
+(SELECT id_serie, nombre, tipo_usuario FROM series s
+INNER JOIN tipo_usuarios t 
+ON s.membresia_req = t.series_permitidas 
+ORDER BY tipo_usuario);
+-- Las siguientes vistas nos muestran aquellas series que son ATP segun la clasificacion por edades.
+CREATE VIEW series_atp AS
+(SELECT id_serie, nombre, descripcion FROM series
+WHERE clasificacion_edades LIKE 'ATP');
+-- Las siguientes vistas nos muestran aquellas peliculas que son ATP segun la clasificacion por edades.
+CREATE VIEW peliculas_atp AS
+(SELECT id_pelicula, nombre, descripcion FROM peliculas
+WHERE clasificacion_edades LIKE 'ATP');
