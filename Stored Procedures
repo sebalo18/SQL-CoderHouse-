@@ -89,7 +89,7 @@ $$
 
 -- Sirve para buscar series que protagonice el actor/actriz
 DELIMITER $$
-CREATE PROCEDURE buscar_actor (par_actor INT)
+CREATE PROCEDURE buscar_actor_serie (par_actor INT)
 BEGIN
 DECLARE var_actor INT;
 
